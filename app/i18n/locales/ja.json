@@ -1,0 +1,116 @@
+{
+  "common": {
+    "title": "QuickUtil - すべてのユーティリティを一箇所に",
+    "description": "必須ユーティリティツールコレクション"
+  },
+  "header": {
+    "slogan": "すべてのユーティリティを一箇所に"
+  },
+  "main": {
+    "headline1": "すべてのツールを",
+    "headline2": "一箇所で",
+    "description": "必要なユーティリティツールを一箇所で素早く安全に使用できます",
+    "subDescription": "ブラウザで直接使用できる強力な開発ツール"
+  },
+  "category": {
+    "data": "データ処理",
+    "file": "ファイル",
+    "image": "画像",
+    "security": "セキュリティ",
+    "other": "その他のツール"
+  },
+  "tools": {
+    "jsonFormatter": {
+      "title": "JSONフォーマッター",
+      "description": "JSONデータを見やすく整形し、検証できます"
+    },
+    "base64Encoder": {
+      "title": "Base64エンコーダー",
+      "description": "テキスト、画像、ファイルをBase64でエンコード・デコードできます"
+    },
+    "urlEncoder": {
+      "title": "URLエンコーダー",
+      "description": "URLの特殊文字をエンコード・デコードして安全に使用できます"
+    },
+    "csvConverter": {
+      "title": "CSVコンバーター",
+      "description": "CSVファイルをJSONに変換し、JSONをCSVにエクスポートできます"
+    },
+    "xmlFormatter": {
+      "title": "XMLフォーマッター",
+      "description": "XMLデータを見やすく整形し、検証できます"
+    },
+    "pdfTools": {
+      "title": "PDFツール",
+      "description": "PDFの結合、分割、画像変換、ページ回転など様々なPDF操作が可能です"
+    },
+    "imageConverter": {
+      "title": "画像コンバーター",
+      "description": "JPG、PNG、WebP、ICO、SVGなど様々な画像形式を変換・最適化できます"
+    },
+    "audioConverter": {
+      "title": "オーディオコンバーター",
+      "description": "MP3、WAV、OGG、AACなど様々なオーディオ形式を変換・品質調整できます"
+    },
+    "videoConverter": {
+      "title": "ビデオコンバーター",
+      "description": "MP4、WebM、MOVなど様々なビデオ形式を変換・圧縮できます"
+    },
+    "documentConverter": {
+      "title": "ドキュメントコンバーター",
+      "description": "Word、Excel、PowerPoint、PDFなど様々なドキュメント形式を変換できます"
+    },
+    "archiveTools": {
+      "title": "アーカイブツール",
+      "description": "ZIP、RAR、7Zなど様々なアーカイブ形式を作成・展開できます"
+    },
+    "qrCodeGenerator": {
+      "title": "QRコードジェネレーター",
+      "description": "URL、テキスト、連絡先、WiFi情報をQRコードに変換してダウンロードできます"
+    },
+    "imageResizer": {
+      "title": "画像リサイザー",
+      "description": "画像サイズを調整し、アスペクト比を維持しながら品質を調整できます"
+    },
+    "faviconGenerator": {
+      "title": "ファビコンジェネレーター",
+      "description": "様々なアイコンをファビコン(.ico)に変換し、ウェブサイト用のファビコンを生成できます"
+    },
+    "passwordGenerator": {
+      "title": "パスワードジェネレーター",
+      "description": "特殊文字、数字、大文字小文字を含む強力なパスワードを生成できます"
+    },
+    "hashGenerator": {
+      "title": "ハッシュジェネレーター",
+      "description": "MD5、SHA1、SHA256、SHA512など様々なハッシュアルゴリズムで変換できます"
+    },
+    "uuidGenerator": {
+      "title": "UUIDジェネレーター",
+      "description": "UUID v1、v4バージョンの一意識別子を生成し、一括コピーできます"
+    },
+    "jwtDecoder": {
+      "title": "JWTデコーダー",
+      "description": "JWTトークンをデコードし、ヘッダー、ペイロード、署名を検証できます"
+    },
+    "validation": {
+      "title": "バリデーション",
+      "description": "JSONスキーマ、XML、YAML、CSVなど様々なデータ形式の検証とエラー検出が可能です"
+    },
+    "encoding": {
+      "title": "エンコーディング",
+      "description": "HTMLエンティティ、Unicode、URLコンポーネントなど様々なエンコーディング方式で変換できます"
+    },
+    "time": {
+      "title": "時間",
+      "description": "Unixタイムスタンプ変換、日付計算、タイムゾーン変換、cron式生成などが可能です"
+    },
+    "network": {
+      "title": "ネットワーク",
+      "description": "IP情報照会、DNSレコード検証、SSL証明書確認、ポートスキャンなどが可能です"
+    }
+  },
+  "footer": {
+    "summary": "必須ユーティリティツールコレクション",
+    "copyright": "© 2025 QuickUtil. All rights reserved."
+  }
+} 
