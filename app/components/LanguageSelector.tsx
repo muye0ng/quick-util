@@ -4,17 +4,21 @@ import { useState, useRef, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { ChevronDownIcon } from '@heroicons/react/24/outline'
 
+const supportedLangs = ['ko', 'en', 'ja', 'uk', 'de', 'fr', 'es', 'vi', 'hi', 'id', 'zh'];
+const langPattern = new RegExp(`^/(${supportedLangs.join('|')})(/|$)`, 'i');
+
 const languages = [
   { code: 'ko', name: '한국어', flag: '🇰🇷' },
   { code: 'en', name: 'English', flag: '🇺🇸' },
-  { code: 'fr', name: 'Français', flag: '🇫🇷' },
-  { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-  { code: 'id', name: 'Bahasa Indonesia', flag: '🇮🇩' },
   { code: 'ja', name: '日本語', flag: '🇯🇵' },
+  { code: 'uk', name: 'Українська', flag: '🇺🇦' },
+  { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+  { code: 'fr', name: 'Français', flag: '🇫🇷' },
   { code: 'es', name: 'Español', flag: '🇪🇸' },
-  { code: 'hi', name: 'हिन्दी', flag: '🇮🇳' },
-  { code: 'zh', name: '中文', flag: '🇨🇳' },
   { code: 'vi', name: 'Tiếng Việt', flag: '🇻🇳' },
+  { code: 'hi', name: 'हिन्दी', flag: '🇮🇳' },
+  { code: 'id', name: 'Bahasa Indonesia', flag: '🇮🇩' },
+  { code: 'zh', name: '中文', flag: '🇨🇳' },
 ] as const
 
 export default function LanguageSelector({ currentLang }: { currentLang: string }) {
@@ -41,12 +45,12 @@ export default function LanguageSelector({ currentLang }: { currentLang: string 
   }, [])
 
   const handleLanguageChange = (langCode: string) => {
-    if (!mounted) return
-    
-    const currentPath = window.location.pathname
-    const newPath = currentPath.replace(/^\/[^/]+/, `/${langCode}`)
-    router.push(newPath)
-    setIsOpen(false)
+    if (!mounted) return;
+
+    const currentPath = window.location.pathname;
+    const newPath = currentPath.replace(langPattern, `/${langCode}/`).replace(/\/+$/, '/');
+    window.location.href = newPath; // 전체 페이지 리로드로 SSR 강제
+    setIsOpen(false);
   }
 
   if (!mounted) {

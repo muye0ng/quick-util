@@ -29,8 +29,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Val
   const { lang } = await params
   const dict = await getDictionary(lang)
   return {
-    title: dict.common.title,
-    description: dict.common.description,
+    title: dict?.common?.title ?? 'QuickUtil',
+    description: dict?.common?.description ?? '',
   }
 }
 
@@ -52,7 +52,7 @@ export default async function Home({
             Quick<span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Util</span>
           </h1>
           <p className="text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            개발자를 위한 필수 유틸리티 도구들을 한 곳에서 빠르고 안전하게 사용하세요
+            {dict.main.description}
           </p>
         </div>
       </section>
@@ -63,10 +63,13 @@ export default async function Home({
         <div className="max-w-7xl mx-auto px-6 py-12 relative">
           <div className="text-center mb-20">
             <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
-              모든 도구를 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">한 곳에서</span>
+              {dict.main.headline1}
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                {dict.main.headline2}
+              </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              브라우저에서 바로 사용할 수 있는 강력한 개발 도구들
+              {dict.main.subDescription}
             </p>
           </div>
           
@@ -74,7 +77,9 @@ export default async function Home({
           <div className="mb-20">
             <div className="flex items-center min-h-[56px] pl-1 pr-1 mb-10">
               <div className="w-1 h-8 bg-gradient-to-b from-blue-500 to-blue-600 rounded-full mr-4"></div>
-              <h3 className="text-2xl font-bold text-gray-900 py-2">데이터처리</h3>
+              <h3 className="text-2xl font-bold text-gray-900 py-2">
+                {dict.category.data}
+              </h3>
               <div className="flex-1 h-px bg-gradient-to-r from-blue-200 to-transparent ml-6"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -85,10 +90,10 @@ export default async function Home({
                     <DocumentTextIcon className="w-6 h-6 text-gray-700 flex-shrink-0 group-hover:text-blue-600 transition-colors" style={{ width: '24px', height: '24px' }} />
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">
-                        JSON 포맷터
+                        {dict.tools.jsonFormatter.title}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        JSON 데이터를 보기 좋게 정렬하고, 유효성을 검사하며, 압축/해제할 수 있습니다
+                        {dict.tools.jsonFormatter.description}
                       </p>
                     </div>
                   </div>
@@ -102,10 +107,10 @@ export default async function Home({
                     <LockClosedIcon className="w-6 h-6 text-gray-700 flex-shrink-0 group-hover:text-green-600 transition-colors" style={{ width: '24px', height: '24px' }} />
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-green-600 transition-colors">
-                        Base64 인코더
+                        {dict.tools.base64Encoder.title}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        텍스트와 이미지, 파일을 Base64로 인코딩하고 디코딩할 수 있습니다
+                        {dict.tools.base64Encoder.description}
                       </p>
                     </div>
                   </div>
@@ -119,10 +124,10 @@ export default async function Home({
                     <LinkIcon className="w-6 h-6 text-gray-700 flex-shrink-0 group-hover:text-orange-600 transition-colors" style={{ width: '24px', height: '24px' }} />
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-orange-600 transition-colors">
-                        URL 인코더
+                        {dict.tools.urlEncoder.title}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        URL의 특수문자를 인코딩하고 디코딩하여 안전하게 사용할 수 있습니다
+                        {dict.tools.urlEncoder.description}
                       </p>
                     </div>
                   </div>
@@ -136,10 +141,10 @@ export default async function Home({
                     <DocumentDuplicateIcon className="w-6 h-6 text-gray-700 flex-shrink-0 group-hover:text-blue-600 transition-colors" style={{ width: '24px', height: '24px' }} />
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">
-                        CSV 변환기
+                        {dict.tools.csvConverter.title}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        CSV 파일을 JSON으로 변환하고, JSON을 CSV로 내보낼 수 있습니다
+                        {dict.tools.csvConverter.description}
                       </p>
                     </div>
                   </div>
@@ -153,10 +158,10 @@ export default async function Home({
                     <DocumentTextIcon className="w-6 h-6 text-gray-700 flex-shrink-0 group-hover:text-blue-600 transition-colors" style={{ width: '24px', height: '24px' }} />
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">
-                        XML 포맷터
+                        {dict.tools.xmlFormatter.title}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        XML 데이터를 보기 좋게 정렬하고, 유효성을 검사할 수 있습니다
+                        {dict.tools.xmlFormatter.description}
                       </p>
                     </div>
                   </div>
@@ -169,7 +174,7 @@ export default async function Home({
           <div className="mb-20">
             <div className="flex items-center min-h-[56px] pl-1 pr-1 mb-10">
               <div className="w-1 h-8 bg-gradient-to-b from-yellow-500 to-yellow-600 rounded-full mr-4"></div>
-              <h3 className="text-2xl font-bold text-gray-900 py-2">파일</h3>
+              <h3 className="text-2xl font-bold text-gray-900 py-2">{dict.category.file}</h3>
               <div className="flex-1 h-px bg-gradient-to-r from-yellow-200 to-transparent ml-6"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -182,10 +187,10 @@ export default async function Home({
                     </span>
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-yellow-600 transition-colors">
-                        PDF 도구
+                        {dict.tools.pdfTools.title}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        PDF 병합, 분할, 이미지 변환, 페이지 회전 등 다양한 PDF 작업을 할 수 있습니다
+                        {dict.tools.pdfTools.description}
                       </p>
                     </div>
                   </div>
@@ -199,10 +204,10 @@ export default async function Home({
                     <PhotoIcon2 className="w-6 h-6 text-gray-700 flex-shrink-0 group-hover:text-yellow-600 transition-colors" style={{ width: '24px', height: '24px' }} />
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-yellow-600 transition-colors">
-                        이미지 변환기
+                        {dict.tools.imageConverter.title}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        JPG, PNG, WebP, ICO, SVG 등 다양한 이미지 포맷을 변환하고 최적화할 수 있습니다
+                        {dict.tools.imageConverter.description}
                       </p>
                     </div>
                   </div>
@@ -216,10 +221,10 @@ export default async function Home({
                     <MusicalNoteIcon className="w-6 h-6 text-gray-700 flex-shrink-0 group-hover:text-yellow-600 transition-colors" style={{ width: '24px', height: '24px' }} />
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-yellow-600 transition-colors">
-                        오디오 변환기
+                        {dict.tools.audioConverter.title}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        MP3, WAV, OGG, AAC 등 다양한 오디오 포맷을 변환하고 품질을 조절할 수 있습니다
+                        {dict.tools.audioConverter.description}
                       </p>
                     </div>
                   </div>
@@ -233,10 +238,10 @@ export default async function Home({
                     <VideoCameraIcon className="w-6 h-6 text-gray-700 flex-shrink-0 group-hover:text-yellow-600 transition-colors" style={{ width: '24px', height: '24px' }} />
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-yellow-600 transition-colors">
-                        비디오 변환기
+                        {dict.tools.videoConverter.title}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        MP4, WebM, MOV 등 다양한 비디오 포맷을 변환하고 압축할 수 있습니다
+                        {dict.tools.videoConverter.description}
                       </p>
                     </div>
                   </div>
@@ -250,10 +255,10 @@ export default async function Home({
                     <DocumentTextIcon2 className="w-6 h-6 text-gray-700 flex-shrink-0 group-hover:text-yellow-600 transition-colors" style={{ width: '24px', height: '24px' }} />
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-yellow-600 transition-colors">
-                        문서 변환기
+                        {dict.tools.documentConverter.title}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        Word, Excel, PowerPoint, PDF 등 다양한 문서 포맷을 변환할 수 있습니다
+                        {dict.tools.documentConverter.description}
                       </p>
                     </div>
                   </div>
@@ -267,10 +272,10 @@ export default async function Home({
                     <ArchiveBoxIcon className="w-6 h-6 text-gray-700 flex-shrink-0 group-hover:text-yellow-600 transition-colors" style={{ width: '24px', height: '24px' }} />
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-yellow-600 transition-colors">
-                        압축 도구
+                        {dict.tools.archiveTools.title}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        ZIP, RAR, 7Z 등 다양한 압축 파일을 생성하고 압축을 풀 수 있습니다
+                        {dict.tools.archiveTools.description}
                       </p>
                     </div>
                   </div>
@@ -283,7 +288,7 @@ export default async function Home({
           <div className="mb-20">
             <div className="flex items-center min-h-[56px] pl-1 pr-1 mb-10">
               <div className="w-1 h-8 bg-gradient-to-b from-purple-500 to-purple-600 rounded-full mr-4"></div>
-              <h3 className="text-2xl font-bold text-gray-900 py-2">이미지</h3>
+              <h3 className="text-2xl font-bold text-gray-900 py-2">{dict.category.image}</h3>
               <div className="flex-1 h-px bg-gradient-to-r from-purple-200 to-transparent ml-6"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -294,10 +299,10 @@ export default async function Home({
                     <QrCodeIcon className="w-6 h-6 text-gray-700 flex-shrink-0 group-hover:text-purple-600 transition-colors" style={{ width: '24px', height: '24px' }} />
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-purple-600 transition-colors">
-                        QR코드 생성기
+                        {dict.tools.qrCodeGenerator.title}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        URL, 텍스트, 연락처, WiFi 정보를 QR 코드로 변환하고 다운로드할 수 있습니다
+                        {dict.tools.qrCodeGenerator.description}
                       </p>
                     </div>
                   </div>
@@ -311,10 +316,10 @@ export default async function Home({
                     <PhotoIcon className="w-6 h-6 text-gray-700 flex-shrink-0 group-hover:text-pink-600 transition-colors" style={{ width: '24px', height: '24px' }} />
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-pink-600 transition-colors">
-                        이미지 변환기
+                        {dict.tools.imageConverter.title}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        JPG, PNG, WebP, GIF 등 다양한 이미지 포맷을 변환하고 최적화할 수 있습니다
+                        {dict.tools.imageConverter.description}
                       </p>
                     </div>
                   </div>
@@ -328,10 +333,10 @@ export default async function Home({
                     <PhotoIcon className="w-6 h-6 text-gray-700 flex-shrink-0 group-hover:text-indigo-600 transition-colors" style={{ width: '24px', height: '24px' }} />
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-indigo-600 transition-colors">
-                        이미지 리사이저
+                        {dict.tools.imageResizer.title}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        이미지 크기를 조정하고, 비율을 유지하며, 품질을 조절할 수 있습니다
+                        {dict.tools.imageResizer.description}
                       </p>
                     </div>
                   </div>
@@ -349,10 +354,10 @@ export default async function Home({
                     </span>
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-yellow-600 transition-colors">
-                        파비콘 생성기
+                        {dict.tools.faviconGenerator.title}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        다양한 아이콘을 파비콘(.ico)으로 변환하고, 웹사이트에 적용할 수 있는 파비콘을 생성합니다
+                        {dict.tools.faviconGenerator.description}
                       </p>
                     </div>
                   </div>
@@ -365,7 +370,7 @@ export default async function Home({
           <div className="mb-20">
             <div className="flex items-center min-h-[56px] pl-1 pr-1 mb-10">
               <div className="w-1 h-8 bg-gradient-to-b from-red-500 to-red-600 rounded-full mr-4"></div>
-              <h3 className="text-2xl font-bold text-gray-900 py-2">보안</h3>
+              <h3 className="text-2xl font-bold text-gray-900 py-2">{dict.category.security}</h3>
               <div className="flex-1 h-px bg-gradient-to-r from-red-200 to-transparent ml-6"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -376,10 +381,10 @@ export default async function Home({
                     <KeyIcon className="w-6 h-6 text-gray-700 flex-shrink-0 group-hover:text-red-600 transition-colors" style={{ width: '24px', height: '24px' }} />
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-red-600 transition-colors">
-                        비밀번호 생성기
+                        {dict.tools.passwordGenerator.title}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        특수문자, 숫자, 대소문자를 포함한 강력한 비밀번호를 생성할 수 있습니다
+                        {dict.tools.passwordGenerator.description}
                       </p>
                     </div>
                   </div>
@@ -393,10 +398,10 @@ export default async function Home({
                     <HashtagIcon className="w-6 h-6 text-gray-700 flex-shrink-0 group-hover:text-red-600 transition-colors" style={{ width: '24px', height: '24px' }} />
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-red-600 transition-colors">
-                        해시 생성기
+                        {dict.tools.hashGenerator.title}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        MD5, SHA1, SHA256, SHA512 등 다양한 해시 알고리즘으로 변환할 수 있습니다
+                        {dict.tools.hashGenerator.description}
                       </p>
                     </div>
                   </div>
@@ -410,10 +415,10 @@ export default async function Home({
                     <FingerPrintIcon className="w-6 h-6 text-gray-700 flex-shrink-0 group-hover:text-red-600 transition-colors" style={{ width: '24px', height: '24px' }} />
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-red-600 transition-colors">
-                        UUID 생성기
+                        {dict.tools.uuidGenerator.title}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        UUID v1, v4 버전의 고유 식별자를 생성하고 대량으로 복사할 수 있습니다
+                        {dict.tools.uuidGenerator.description}
                       </p>
                     </div>
                   </div>
@@ -427,10 +432,10 @@ export default async function Home({
                     <LockClosedIcon className="w-6 h-6 text-gray-700 flex-shrink-0 group-hover:text-red-600 transition-colors" style={{ width: '24px', height: '24px' }} />
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-red-600 transition-colors">
-                        JWT 디코더
+                        {dict.tools.jwtDecoder.title}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        JWT 토큰을 디코딩하고 헤더, 페이로드, 서명을 검증할 수 있습니다
+                        {dict.tools.jwtDecoder.description}
                       </p>
                     </div>
                   </div>
@@ -443,7 +448,7 @@ export default async function Home({
           <div>
             <div className="flex items-center min-h-[56px] pl-1 pr-1 mb-10">
               <div className="w-1 h-8 bg-gradient-to-b from-gray-500 to-gray-600 rounded-full mr-4"></div>
-              <h3 className="text-2xl font-bold text-gray-900 py-2">기타도구</h3>
+              <h3 className="text-2xl font-bold text-gray-900 py-2">{dict.category.other}</h3>
               <div className="flex-1 h-px bg-gradient-to-r from-gray-200 to-transparent ml-6"></div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -454,10 +459,10 @@ export default async function Home({
                     <DocumentIcon className="w-6 h-6 text-gray-700 flex-shrink-0 group-hover:text-gray-600 transition-colors" style={{ width: '24px', height: '24px' }} />
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-gray-600 transition-colors">
-                        검증
+                        {dict.tools.validation.title}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        JSON 스키마, XML, YAML, CSV 등 다양한 데이터 형식의 유효성을 검사하고 오류를 찾을 수 있습니다
+                        {dict.tools.validation.description}
                       </p>
                     </div>
                   </div>
@@ -471,10 +476,10 @@ export default async function Home({
                     <CodeBracketIcon className="w-6 h-6 text-gray-700 flex-shrink-0 group-hover:text-gray-600 transition-colors" style={{ width: '24px', height: '24px' }} />
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-gray-600 transition-colors">
-                        인코딩
+                        {dict.tools.encoding.title}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        HTML 엔티티, 유니코드, URL 컴포넌트 등 다양한 인코딩 방식으로 변환할 수 있습니다
+                        {dict.tools.encoding.description}
                       </p>
                     </div>
                   </div>
@@ -488,10 +493,10 @@ export default async function Home({
                     <ClockIcon className="w-6 h-6 text-gray-700 flex-shrink-0 group-hover:text-gray-600 transition-colors" style={{ width: '24px', height: '24px' }} />
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-gray-600 transition-colors">
-                        시간
+                        {dict.tools.time.title}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        Unix 타임스탬프 변환, 날짜 계산, 시간대 변환, 크론 표현식 생성 등을 할 수 있습니다
+                        {dict.tools.time.description}
                       </p>
                     </div>
                   </div>
@@ -505,10 +510,10 @@ export default async function Home({
                     <GlobeAltIcon className="w-6 h-6 text-gray-700 flex-shrink-0 group-hover:text-gray-600 transition-colors" style={{ width: '24px', height: '24px' }} />
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-gray-600 transition-colors">
-                        네트워크
+                        {dict.tools.network.title}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        IP 정보 조회, DNS 레코드 검사, SSL 인증서 확인, 포트 스캔 등을 할 수 있습니다
+                        {dict.tools.network.description}
                       </p>
                     </div>
                   </div>

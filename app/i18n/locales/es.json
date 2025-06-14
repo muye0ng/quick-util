@@ -1,22 +1,116 @@
 {
-  "navigation": {
-    "home": "Inicio",
-    "tools": "Herramientas",
-    "jsonFormatter": "Formateador JSON",
-    "base64Encoder": "Codificador Base64",
-    "urlEncoder": "Codificador URL",
-    "qrCodeGenerator": "Generador QR",
-    "uuidGenerator": "Generador UUID",
-    "passwordGenerator": "Generador de Contraseñas",
-    "hashGenerator": "Generador de Hash"
+  "common": {
+    "title": "QuickUtil - Todas las utilidades en un solo lugar",
+    "description": "Colección de herramientas de utilidad esenciales"
+  },
+  "header": {
+    "slogan": "Todas las utilidades en un solo lugar"
+  },
+  "main": {
+    "headline1": "Todas las herramientas",
+    "headline2": "en un solo lugar",
+    "description": "Use herramientas de utilidad esenciales de forma rápida y segura en un solo lugar",
+    "subDescription": "Potentes herramientas de desarrollo disponibles directamente en su navegador"
+  },
+  "category": {
+    "data": "Procesamiento de datos",
+    "file": "Archivos",
+    "image": "Imágenes",
+    "security": "Seguridad",
+    "other": "Otras herramientas"
   },
   "tools": {
-    "jsonFormatter": "Formateador JSON",
-    "base64Encoder": "Codificador Base64",
-    "urlEncoder": "Codificador URL",
-    "qrCodeGenerator": "Generador QR",
-    "uuidGenerator": "Generador UUID",
-    "passwordGenerator": "Generador de Contraseñas",
-    "hashGenerator": "Generador de Hash"
+    "jsonFormatter": {
+      "title": "Formateador JSON",
+      "description": "Formatee y valide datos JSON para una mejor legibilidad"
+    },
+    "base64Encoder": {
+      "title": "Codificador Base64",
+      "description": "Codifique y decodifique texto, imágenes y archivos a Base64"
+    },
+    "urlEncoder": {
+      "title": "Codificador URL",
+      "description": "Codifique y decodifique caracteres especiales en URLs para un uso seguro"
+    },
+    "csvConverter": {
+      "title": "Convertidor CSV",
+      "description": "Convierta archivos CSV a JSON y exporte JSON a CSV"
+    },
+    "xmlFormatter": {
+      "title": "Formateador XML",
+      "description": "Formatee y valide datos XML para una mejor legibilidad"
+    },
+    "pdfTools": {
+      "title": "Herramientas PDF",
+      "description": "Combine, divida, convierta a imágenes, gire páginas y más con archivos PDF"
+    },
+    "imageConverter": {
+      "title": "Convertidor de imágenes",
+      "description": "Convierta y optimice varios formatos de imagen como JPG, PNG, WebP, ICO, SVG"
+    },
+    "audioConverter": {
+      "title": "Convertidor de audio",
+      "description": "Convierta y ajuste la calidad de varios formatos de audio como MP3, WAV, OGG, AAC"
+    },
+    "videoConverter": {
+      "title": "Convertidor de video",
+      "description": "Convierta y comprima varios formatos de video como MP4, WebM, MOV"
+    },
+    "documentConverter": {
+      "title": "Convertidor de documentos",
+      "description": "Convierta varios formatos de documentos como Word, Excel, PowerPoint, PDF"
+    },
+    "archiveTools": {
+      "title": "Herramientas de archivo",
+      "description": "Cree y extraiga varios formatos de archivo como ZIP, RAR, 7Z"
+    },
+    "qrCodeGenerator": {
+      "title": "Generador de códigos QR",
+      "description": "Convierta URLs, texto, contactos e información WiFi en códigos QR y descárguelos"
+    },
+    "imageResizer": {
+      "title": "Redimensionador de imágenes",
+      "description": "Redimensione imágenes, mantenga la proporción y ajuste la calidad"
+    },
+    "faviconGenerator": {
+      "title": "Generador de favicon",
+      "description": "Convierta varios iconos a favicon (.ico) y genere favicons para sitios web"
+    },
+    "passwordGenerator": {
+      "title": "Generador de contraseñas",
+      "description": "Genere contraseñas fuertes incluyendo caracteres especiales, números y mayúsculas/minúsculas"
+    },
+    "hashGenerator": {
+      "title": "Generador de hash",
+      "description": "Convierta a varios algoritmos de hash como MD5, SHA1, SHA256, SHA512"
+    },
+    "uuidGenerator": {
+      "title": "Generador UUID",
+      "description": "Genere identificadores únicos en versiones UUID v1, v4 y cópielos en masa"
+    },
+    "jwtDecoder": {
+      "title": "Decodificador JWT",
+      "description": "Decodifique tokens JWT y verifique encabezados, cargas útiles y firmas"
+    },
+    "validation": {
+      "title": "Validación",
+      "description": "Valide y encuentre errores en varios formatos de datos como esquema JSON, XML, YAML, CSV"
+    },
+    "encoding": {
+      "title": "Codificación",
+      "description": "Convierta a varios métodos de codificación como entidades HTML, Unicode, componentes URL"
+    },
+    "time": {
+      "title": "Tiempo",
+      "description": "Convierta marcas de tiempo Unix, calcule fechas, convierta zonas horarias, genere expresiones cron y más"
+    },
+    "network": {
+      "title": "Red",
+      "description": "Verifique información IP, registros DNS, certificados SSL, escaneo de puertos y más"
+    }
+  },
+  "footer": {
+    "summary": "Colección de herramientas de utilidad esenciales",
+    "copyright": "© 2025 QuickUtil. All rights reserved."
   }
 } 

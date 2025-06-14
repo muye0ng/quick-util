@@ -19,13 +19,8 @@ interface LayoutProps {
 
 export default function RootLayout({ children, params }: LayoutProps) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="icon" href="/Q.ico" />
-      </head>
-      <body className={inter.className}>
-        {children}
-      </body>
-    </html>
+    <body className={inter.className}>
+      {children}
+    </body>
   )
 } 

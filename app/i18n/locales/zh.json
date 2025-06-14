@@ -1,23 +1,116 @@
 {
-  
-  "navigation": {
-    "home": "首页",
-    "tools": "工具",
-    "jsonFormatter": "JSON格式化",
-    "base64Encoder": "Base64编码器",
-    "urlEncoder": "URL编码器",
-    "qrCodeGenerator": "二维码生成器",
-    "uuidGenerator": "UUID生成器",
-    "passwordGenerator": "密码生成器",
-    "hashGenerator": "哈希生成器"
+  "common": {
+    "title": "QuickUtil - 所有工具一站式集成",
+    "description": "实用工具合集"
+  },
+  "header": {
+    "slogan": "所有工具一站式集成"
+  },
+  "main": {
+    "headline1": "所有工具",
+    "headline2": "一站式集成",
+    "description": "在一个地方快速、安全地使用所有必备实用工具",
+    "subDescription": "强大的开发工具，直接在您的浏览器中可用"
+  },
+  "category": {
+    "data": "数据处理",
+    "file": "文件",
+    "image": "图片",
+    "security": "安全",
+    "other": "其他工具"
   },
   "tools": {
-    "jsonFormatter": "JSON格式化",
-    "base64Encoder": "Base64编码器",
-    "urlEncoder": "URL编码器",
-    "qrCodeGenerator": "二维码生成器",
-    "uuidGenerator": "UUID生成器",
-    "passwordGenerator": "密码生成器",
-    "hashGenerator": "哈希生成器"
+    "jsonFormatter": {
+      "title": "JSON 格式化器",
+      "description": "格式化和校验 JSON 数据，提升可读性"
+    },
+    "base64Encoder": {
+      "title": "Base64 编码器",
+      "description": "对文本、图片和文件进行 Base64 编码和解码"
+    },
+    "urlEncoder": {
+      "title": "URL 编码器",
+      "description": "对 URL 中的特殊字符进行编码和解码，确保安全"
+    },
+    "csvConverter": {
+      "title": "CSV 转换器",
+      "description": "将 CSV 文件转换为 JSON，或将 JSON 导出为 CSV"
+    },
+    "xmlFormatter": {
+      "title": "XML 格式化器",
+      "description": "格式化和校验 XML 数据，提升可读性"
+    },
+    "pdfTools": {
+      "title": "PDF 工具",
+      "description": "合并、拆分 PDF 文件，转换为图片，旋转页面等"
+    },
+    "imageConverter": {
+      "title": "图片转换器",
+      "description": "转换和优化 JPG、PNG、WebP、ICO、SVG 等多种图片格式"
+    },
+    "audioConverter": {
+      "title": "音频转换器",
+      "description": "转换和调整 MP3、WAV、OGG、AAC 等多种音频格式的质量"
+    },
+    "videoConverter": {
+      "title": "视频转换器",
+      "description": "转换和压缩 MP4、WebM、MOV 等多种视频格式"
+    },
+    "documentConverter": {
+      "title": "文档转换器",
+      "description": "转换 Word、Excel、PowerPoint、PDF 等多种文档格式"
+    },
+    "archiveTools": {
+      "title": "压缩包工具",
+      "description": "创建和解压 ZIP、RAR、7Z 等多种压缩包格式"
+    },
+    "qrCodeGenerator": {
+      "title": "二维码生成器",
+      "description": "将 URL、文本、联系人、WiFi 信息生成二维码并下载"
+    },
+    "imageResizer": {
+      "title": "图片尺寸调整器",
+      "description": "调整图片尺寸，保持比例并优化质量"
+    },
+    "faviconGenerator": {
+      "title": "Favicon 生成器",
+      "description": "将多种图标转换为 favicon(.ico)，为网站生成 favicon"
+    },
+    "passwordGenerator": {
+      "title": "密码生成器",
+      "description": "生成包含特殊字符、数字和大小写字母的强密码"
+    },
+    "hashGenerator": {
+      "title": "哈希生成器",
+      "description": "转换为 MD5、SHA1、SHA256、SHA512 等多种哈希算法"
+    },
+    "uuidGenerator": {
+      "title": "UUID 生成器",
+      "description": "生成 UUID v1、v4 等版本的唯一标识符，并批量复制"
+    },
+    "jwtDecoder": {
+      "title": "JWT 解码器",
+      "description": "解码 JWT 令牌，校验头部、载荷和签名"
+    },
+    "validation": {
+      "title": "校验工具",
+      "description": "校验 JSON Schema、XML、YAML、CSV 等多种数据格式，查找错误"
+    },
+    "encoding": {
+      "title": "编码工具",
+      "description": "转换为 HTML 实体、Unicode、URL 组件等多种编码方式"
+    },
+    "time": {
+      "title": "时间工具",
+      "description": "转换 Unix 时间戳，日期计算，时区转换，生成 cron 表达式等"
+    },
+    "network": {
+      "title": "网络工具",
+      "description": "查询 IP 信息、DNS 记录、SSL 证书、端口扫描等"
+    }
+  },
+  "footer": {
+    "summary": "实用工具合集",
+    "copyright": "© 2025 QuickUtil. All rights reserved."
   }
 } 

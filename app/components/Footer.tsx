@@ -5,9 +5,10 @@ import QIcon from '../../public/Q.svg'
 
 interface FooterProps {
   currentLang: string;
+  dict: any;
 }
 
-export default function Footer({ currentLang }: FooterProps) {
+export default function Footer({ currentLang, dict }: FooterProps) {
   return (
     <footer className="sticky bottom-0 z-50 bg-white/80 backdrop-blur-xl border-t border-gray-200/50 drop-shadow-[0_-8px_24px_rgba(0,0,0,0.12)]">
       <div className="max-w-7xl mx-auto px-6 py-4">
@@ -18,7 +19,7 @@ export default function Footer({ currentLang }: FooterProps) {
               <QIcon className="w-2 h-2" style={{width:20, height:20}} />
               <span className="text-lg font-bold">uickUtil</span>
             </div>
-            <p className="text-gray-600 text-sm mb-2">필수 유틸리티 도구 모음</p>
+            <p className="text-gray-600 text-sm mb-2">{dict.footer.summary}</p>
           </div>
           {/* CONTACT */}
         <div>

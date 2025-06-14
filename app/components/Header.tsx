@@ -6,9 +6,10 @@ import QIcon from '../../public/Q.svg'
 
 interface HeaderProps {
   currentLang: string;
+  dict: any;
 }
 
-export default function Header({ currentLang }: HeaderProps) {
+export default function Header({ currentLang, dict }: HeaderProps) {
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-gray-200/50 shadow-lg shadow-gray-900/5">
       <div className="max-w-7xl mx-auto px-6">
@@ -26,7 +27,7 @@ export default function Header({ currentLang }: HeaderProps) {
           ">
             <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full animate-pulse"></div>
             <span className="text-sm font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              세상의 모든 유틸리티
+              {dict.header.slogan}
             </span>
             <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-pulse"></div>
           </div>

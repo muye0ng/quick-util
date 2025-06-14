@@ -4,7 +4,7 @@ import { ValidLocale, defaultLocale } from './settings';
 export default getRequestConfig(async ({ locale }) => {
   const validLocale = (locale || defaultLocale) as ValidLocale;
   
-  const messages = (await import(`../../messages/${validLocale}.json`)).default;
+  const messages = (await import(`./locales/${validLocale}.json`)).default;
   
   return {
     messages,
