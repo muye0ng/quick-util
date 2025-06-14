@@ -178,11 +178,7 @@ export default async function Home({
                 <div className="bg-white border border-gray-300 rounded-lg p-6 hover:bg-gray-100 hover:shadow-lg hover:border-yellow-500 transition-all duration-300">
                   <div className="flex items-start space-x-4">
                     <span className="w-6 h-6 flex-shrink-0 group-hover:text-yellow-600 transition-colors" style={{ display: 'inline-block' }}>
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.5 21.5C10.5 15.5 13.5 8.5 12 2.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M7 16C10 14 17 14 19 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M12 2.5C13 6 16 13 18 17.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
+                      <img src="/pdficon.svg" alt="PDF 아이콘" width={24} height={24} style={{ display: 'block' }} />
                     </span>
                     <div className="flex-1 min-w-0">
                       <h3 className="text-lg font-semibold text-gray-900 mb-1 group-hover:text-yellow-600 transition-colors">
