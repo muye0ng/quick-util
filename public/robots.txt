@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://quickutil.com/api/sitemap
+
+# Tools
+Allow: /tools/json-formatter
+Allow: /tools/base64-encoder
+Allow: /tools/qr-code-generator
+Allow: /tools/url-encoder
+Allow: /tools/uuid-generator
+Allow: /tools/hash-generator
+Allow: /tools/password-generator
+
+# Language variants
+Allow: /ko/
+Allow: /en/
+Allow: /es/
+Allow: /zh/

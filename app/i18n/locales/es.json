@@ -1,0 +1,22 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "tools": "Herramientas",
+    "jsonFormatter": "Formateador JSON",
+    "base64Encoder": "Codificador Base64",
+    "urlEncoder": "Codificador URL",
+    "qrCodeGenerator": "Generador QR",
+    "uuidGenerator": "Generador UUID",
+    "passwordGenerator": "Generador de Contraseñas",
+    "hashGenerator": "Generador de Hash"
+  },
+  "tools": {
+    "jsonFormatter": "Formateador JSON",
+    "base64Encoder": "Codificador Base64",
+    "urlEncoder": "Codificador URL",
+    "qrCodeGenerator": "Generador QR",
+    "uuidGenerator": "Generador UUID",
+    "passwordGenerator": "Generador de Contraseñas",
+    "hashGenerator": "Generador de Hash"
+  }
+} 

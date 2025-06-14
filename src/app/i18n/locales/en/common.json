@@ -1,0 +1,27 @@
+{
+  "common": {
+    "title": "QuickUtil",
+    "description": "Modern utility web service for developers and general users",
+    "language": {
+      "ko": "Korean",
+      "en": "English",
+      "es": "Spanish",
+      "zh": "Chinese"
+    },
+    "theme": {
+      "light": "Light Mode",
+      "dark": "Dark Mode"
+    },
+    "navigation": {
+      "home": "Home",
+      "tools": "Tools",
+      "jsonFormatter": "JSON Formatter",
+      "base64Encoder": "Base64 Encoder",
+      "qrCodeGenerator": "QR Code Generator",
+      "urlEncoder": "URL Encoder",
+      "uuidGenerator": "UUID Generator",
+      "hashGenerator": "Hash Generator",
+      "passwordGenerator": "Password Generator"
+    }
+  }
+}

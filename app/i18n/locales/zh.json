@@ -1,0 +1,23 @@
+{
+  
+  "navigation": {
+    "home": "首页",
+    "tools": "工具",
+    "jsonFormatter": "JSON格式化",
+    "base64Encoder": "Base64编码器",
+    "urlEncoder": "URL编码器",
+    "qrCodeGenerator": "二维码生成器",
+    "uuidGenerator": "UUID生成器",
+    "passwordGenerator": "密码生成器",
+    "hashGenerator": "哈希生成器"
+  },
+  "tools": {
+    "jsonFormatter": "JSON格式化",
+    "base64Encoder": "Base64编码器",
+    "urlEncoder": "URL编码器",
+    "qrCodeGenerator": "二维码生成器",
+    "uuidGenerator": "UUID生成器",
+    "passwordGenerator": "密码生成器",
+    "hashGenerator": "哈希生成器"
+  }
+} 

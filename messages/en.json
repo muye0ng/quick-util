@@ -1,0 +1,55 @@
+{
+  "navigation": {
+    "home": "Home",
+    "tools": "Tools"
+  },
+  "home": {
+    "title": "QuickUtil",
+    "subtitle": "All Utilities in One Place",
+    "description": "Essential utility tools for developers",
+    "categories": {
+      "dataProcessing": "Data Processing",
+      "stringProcessing": "String Processing",
+      "imageProcessing": "Image Processing",
+      "fileProcessing": "File Processing"
+    },
+    "tools": {
+      "jsonFormatter": {
+        "title": "JSON Formatter",
+        "description": "Format and validate JSON data."
+      },
+      "hashGenerator": {
+        "title": "Hash Generator",
+        "description": "Generate various hashes like MD5, SHA-1, SHA-256."
+      },
+      "uuidGenerator": {
+        "title": "UUID Generator",
+        "description": "Generate unique identifiers."
+      },
+      "urlEncoder": {
+        "title": "URL Encoder",
+        "description": "Encode and decode URLs."
+      },
+      "base64Encoder": {
+        "title": "Base64 Encoder",
+        "description": "Convert text and binary data to Base64."
+      },
+      "qrCodeGenerator": {
+        "title": "QR Code Generator",
+        "description": "Convert text or URLs to QR codes."
+      },
+      "imageConverter": {
+        "title": "Image Converter",
+        "description": "Convert image formats and resize images."
+      },
+      "pdfConverter": {
+        "title": "PDF Converter",
+        "description": "Convert PDF files to other formats."
+      },
+      "fileConverter": {
+        "title": "File Converter",
+        "description": "Convert various file formats."
+      }
+    }
+  }
+} 

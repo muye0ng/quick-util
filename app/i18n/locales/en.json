@@ -1,0 +1,22 @@
+{
+  "navigation": {
+    "home": "Home",
+    "tools": "Tools",
+    "jsonFormatter": "JSON Formatter",
+    "base64Encoder": "Base64 Encoder",
+    "urlEncoder": "URL Encoder",
+    "qrCodeGenerator": "QR Code Generator",
+    "uuidGenerator": "UUID Generator",
+    "passwordGenerator": "Password Generator",
+    "hashGenerator": "Hash Generator"
+  },
+  "tools": {
+    "jsonFormatter": "JSON Formatter",
+    "base64Encoder": "Base64 Encoder",
+    "urlEncoder": "URL Encoder",
+    "qrCodeGenerator": "QR Code Generator",
+    "uuidGenerator": "UUID Generator",
+    "passwordGenerator": "Password Generator",
+    "hashGenerator": "Hash Generator"
+  }
+} 

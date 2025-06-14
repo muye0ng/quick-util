@@ -1,0 +1,27 @@
+{
+  "common": {
+    "title": "QuickUtil",
+    "description": "为开发者和普通用户提供的现代实用工具网站",
+    "language": {
+      "ko": "韩语",
+      "en": "英语",
+      "es": "西班牙语",
+      "zh": "中文"
+    },
+    "theme": {
+      "light": "浅色模式",
+      "dark": "深色模式"
+    },
+    "navigation": {
+      "home": "首页",
+      "tools": "工具",
+      "jsonFormatter": "JSON格式化工具",
+      "base64Encoder": "Base64编码器",
+      "qrCodeGenerator": "二维码生成器",
+      "urlEncoder": "URL编码器",
+      "uuidGenerator": "UUID生成器",
+      "hashGenerator": "哈希生成器",
+      "passwordGenerator": "密码生成器"
+    }
+  }
+}

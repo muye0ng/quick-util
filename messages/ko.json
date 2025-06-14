@@ -1,0 +1,55 @@
+{
+  "navigation": {
+    "home": "홈",
+    "tools": "도구"
+  },
+  "home": {
+    "title": "QuickUtil",
+    "subtitle": "세상의 모든 유틸리티",
+    "description": "개발자를 위한 필수 유틸리티 도구 모음",
+    "categories": {
+      "dataProcessing": "데이터 처리",
+      "stringProcessing": "문자열 처리",
+      "imageProcessing": "이미지 처리",
+      "fileProcessing": "파일 처리"
+    },
+    "tools": {
+      "jsonFormatter": {
+        "title": "JSON 포맷터",
+        "description": "JSON 데이터를 보기 좋게 정렬하고 검증합니다."
+      },
+      "hashGenerator": {
+        "title": "해시 생성기",
+        "description": "MD5, SHA-1, SHA-256 등 다양한 해시를 생성합니다."
+      },
+      "uuidGenerator": {
+        "title": "UUID 생성기",
+        "description": "고유 식별자를 생성합니다."
+      },
+      "urlEncoder": {
+        "title": "URL 인코더",
+        "description": "URL을 인코딩하고 디코딩합니다."
+      },
+      "base64Encoder": {
+        "title": "Base64 인코더",
+        "description": "텍스트와 바이너리 데이터를 Base64로 변환합니다."
+      },
+      "qrCodeGenerator": {
+        "title": "QR 코드 생성기",
+        "description": "텍스트나 URL을 QR 코드로 변환합니다."
+      },
+      "imageConverter": {
+        "title": "이미지 변환기",
+        "description": "이미지 형식을 변환하고 크기를 조정합니다."
+      },
+      "pdfConverter": {
+        "title": "PDF 변환기",
+        "description": "PDF 파일을 다른 형식으로 변환합니다."
+      },
+      "fileConverter": {
+        "title": "파일 변환기",
+        "description": "다양한 파일 형식을 변환합니다."
+      }
+    }
+  }
+} 
