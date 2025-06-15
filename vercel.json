@@ -6,11 +6,6 @@
       "use": "@vercel/next"
     }
   ],
-  "env": {
-    "NEXT_PUBLIC_GOOGLE_ANALYTICS_ID": "@NEXT_PUBLIC_GOOGLE_ANALYTICS_ID",
-    "NEXT_PUBLIC_ADSENSE_CLIENT": "@NEXT_PUBLIC_ADSENSE_CLIENT",
-    "NEXT_PUBLIC_ADSENSE_SLOT": "@NEXT_PUBLIC_ADSENSE_SLOT"
-  },
   "rewrites": [
     {
       "source": "/sitemap.xml",
