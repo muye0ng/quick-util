@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { ValidLocale } from './i18n/settings'
+import { cookies } from 'next/headers'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,15 +12,17 @@ export const metadata: Metadata = {
 
 interface LayoutProps {
   children: React.ReactNode
-  params: Promise<{
-    lang: ValidLocale
-  }>
 }
 
-export default function RootLayout({ children, params }: LayoutProps) {
+export default async function RootLayout({ children }: LayoutProps) {
+  const cookieStore = await cookies()
+  const locale = cookieStore.get('NEXT_LOCALE')?.value || 'en'
+  
   return (
-    <body className={inter.className}>
-      {children}
-    </body>
+    <html lang={locale}>
+      <body className={inter.className}>
+        {children}
+      </body>
+    </html>
   )
 } 
