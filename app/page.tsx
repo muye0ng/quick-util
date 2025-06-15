@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import Header from './components/Header'
@@ -27,29 +27,20 @@ import {
 
 export default function Home() {
   const router = useRouter()
-  const [locale, setLocale] = useState('ko')
+  const [locale, setLocale] = useState('en')
 
   useEffect(() => {
-    // 쿠키에서 언어 설정 확인
+    // 미들웨어에서 이미 설정한 쿠키를 사용
     const savedLocale = document.cookie
       .split('; ')
       .find(row => row.startsWith('NEXT_LOCALE='))
-      ?.split('=')[1]
-
-    if (savedLocale) {
-      setLocale(savedLocale)
-    } else {
-      // 쿠키가 없으면 브라우저 언어 설정 사용
-      const browserLang = navigator.language.startsWith('ko') ? 'ko' : 'en'
-      setLocale(browserLang)
-      document.cookie = `NEXT_LOCALE=${browserLang}; path=/; max-age=31536000`
-    }
+      ?.split('=')[1] || 'en'
+    setLocale(savedLocale)
   }, [])
 
   const handleLocaleChange = (newLocale: string) => {
-    setLocale(newLocale)
     document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000`
-    router.refresh()
+    window.location.reload()
   }
 
   const messages = {
@@ -638,7 +629,7 @@ export default function Home() {
       {/* Quick Scroll Button */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed right-8 bottom-24 z-50 p-3 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-white group"
+        className="fixed right-8 bottom-24 z-50 p-3 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-white group focus:outline-none focus:ring-0 focus:ring-offset-0"
       >
         <svg 
           className="w-6 h-6 text-gray-600 group-hover:text-blue-600 transition-colors" 

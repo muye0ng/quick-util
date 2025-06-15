@@ -10,25 +10,22 @@ export default function Base64Encoder() {
   const [output, setOutput] = useState('')
   const [activeTab, setActiveTab] = useState<'encode' | 'decode'>('encode')
   const [copied, setCopied] = useState(false)
-  const [locale, setLocale] = useState('ko')
+  const [locale, setLocale] = useState('en')
   const [encoding, setEncoding] = useState<'utf8' | 'ascii'>('utf8')
   const [safeBase, setSafeBase] = useState(false)
 
   useEffect(() => {
-    // 쿠키에서 언어 설정 확인
+    // 미들웨어에서 이미 설정한 쿠키를 사용
     const savedLocale = document.cookie
       .split('; ')
       .find(row => row.startsWith('NEXT_LOCALE='))
-      ?.split('=')[1]
-
-    if (savedLocale) {
-      setLocale(savedLocale)
-    }
+      ?.split('=')[1] || 'en'
+    setLocale(savedLocale)
   }, [])
 
   const handleLocaleChange = (newLocale: string) => {
-    setLocale(newLocale)
     document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000`
+    window.location.reload()
   }
 
   const handleEncode = () => {
@@ -197,7 +194,7 @@ export default function Base64Encoder() {
           {/* Header */}
           <div>
             <h1 className="text-3xl font-extrabold mb-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent drop-shadow-lg">
-              Base64 인코더/디코더
+              {dict.title}
             </h1>
             <p className="text-[var(--text-secondary)]">
               {dict.description}
