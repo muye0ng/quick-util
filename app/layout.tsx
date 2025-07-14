@@ -22,6 +22,7 @@ export default async function RootLayout({ children }: LayoutProps) {
     <html lang={locale}>
       <body className={inter.className}>
         {children}
+        <script src="https://app.answerhq.co/widget.js" data-company-name="testtest" async></script>
       </body>
     </html>
   )
